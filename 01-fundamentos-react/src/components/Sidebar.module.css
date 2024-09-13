@@ -5,7 +5,8 @@
 }
 
 .sidebar {
-  min-width: 256px;
+  min-width: 16rem;
+  min-height: 18.4rem;
   background-color: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;
@@ -15,17 +16,58 @@
   align-items: center;
 }
 
+.headerImg {
+  width: 100%;
+  height: 4.5rem;
+}
+
+.headerImg img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .profile {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -35px;
+}
+
+.profileImg {
+  height: 4.1rem;
+  width: 4.1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2px;
+  border: 2px solid var(--green-500);
+}
+
+.profileDescription {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileDescription span {
+  color: var(--gray-400);
+}
+
+.profile img {
+  border-radius: 5px;
+  width: 100%;
 }
 
 .sidebar footer {
   width: 100%;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   border-top: 1px solid var(--gray-400);
-  padding: 1.5em 2em 2em 2em;
+  padding: 2rem;
 }
 
 .sidebar footer a {
