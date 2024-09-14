@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className={styles.wrapper}>
-        <Sidebar></Sidebar>
+        <Sidebar />
         <main>
           <Post author="Arthur" description="arthur é um cara legal" />
           <Post author="Arthur" description="arthur é um cara legal" />

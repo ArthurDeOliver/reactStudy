@@ -2,7 +2,6 @@
   line-height: 1.6;
   background-color: #202024;
   min-width: 100%;
-  min-height: 38.8125rem; /* 621px / 16 */
   display: flex;
   padding: 2.5rem; /* 20px / 16 */
   gap: 1.5rem; /* 24px / 16 */
@@ -73,6 +72,7 @@ header span {
 }
 
 .postComment textarea {
+  resize: none;
   display: flex;
   color: white;
   width: 47rem; /* 752px / 16 */
@@ -83,6 +83,16 @@ header span {
   border-radius: 0.5rem; /* 8px / 16 */
   border: 0.0625rem solid var(--green-500); /* 1px / 16 */
   background: var(--Neutral-Colors-Grey-Grey-900, #121214);
+}
+
+.postComment footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.postComment:focus-within footer {
+  visibility: visible;
+  max-height: none;
 }
 
 .postComment button {
