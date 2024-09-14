@@ -40,6 +40,12 @@ export function Post() {
             laborum.
           </p>
         </div>
+
+        <form className={styles.postComment}>
+          <span>Deixe seu feedback</span>
+          <textarea placeholder="Digite um comentário"></textarea>
+          <button>Publicar</button>
+        </form>
       </main>
     </>
   );
