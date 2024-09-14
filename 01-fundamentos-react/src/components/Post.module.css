@@ -99,6 +99,7 @@ header span {
   border-radius: 0.5rem; /* 8px / 16 */
   border: none;
   width: fit-content;
+  height: fit-content;
   text-align: center;
   cursor: pointer;
   font-weight: bold;

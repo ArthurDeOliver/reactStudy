@@ -1,3 +1,4 @@
+import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 
 export function Post() {
@@ -25,19 +26,18 @@ export function Post() {
 
         <div className={styles.postContent}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-            maiores ducimus? Reprehenderit natus quam consectetur fugiat
-            explicabo, veritatis quisquam rerum nam beatae nemo expedita.
-            Numquam doloremque, architecto alias deserunt explicabo nesciunt
-            quaerat esse doloribus eligendi deleniti earum, consequatur illo
-            dolorum, laudantium eaque adipisci libero voluptatem officia non
-            ipsam animi. Nesciunt omnis non eius molestias labore soluta eum
-            obcaecati in praesentium placeat debitis repudiandae, asperiores
-            aperiam facere sequi blanditiis, earum nam voluptate necessitatibus!
-            Pariatur modi porro suscipit, deleniti alias debitis quae mollitia
-            id molestiae. Commodi repellat ipsum veniam veritatis at! Cum,
-            reiciendis architecto in minima labore dolores est debitis ratione
-            laborum.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+            tempore repudiandae accusantium impedit laboriosam iure culpa
+            similique quasi laudantium dolorem, ullam saepe rem iusto quo qui,
+            nemo minus inventore velit aperiam vero reiciendis. Dicta corporis
+            commodi laborum natus, nesciunt deserunt adipisci, nam pariatur
+            deleniti aperiam quibusdam quaerat repellendus quisquam cumque in
+            qui quo accusamus velit reprehenderit sed minus ab facilis
+            doloribus. Fugiat, eveniet? Minima eaque molestias suscipit, nam
+            fugiat dolor. Voluptate est magnam similique non quidem, illum
+            consequuntur quae atque maxime aspernatur ratione, fugiat dolor
+            nulla autem vitae placeat tempora voluptates et, accusantium nobis
+            tenetur ab quo! Quis, earum maxime.
           </p>
         </div>
 
@@ -48,6 +48,9 @@ export function Post() {
             <button>Publicar</button>
           </footer>
         </form>
+
+        <Comment />
+        <Comment />
       </main>
     </>
   );
