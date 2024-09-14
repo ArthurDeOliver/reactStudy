@@ -44,7 +44,9 @@ export function Post() {
         <form className={styles.postComment}>
           <span>Deixe seu feedback</span>
           <textarea placeholder="Digite um comentário"></textarea>
-          <button>Publicar</button>
+          <button>
+            <span>Publicar</span>
+          </button>
         </form>
       </main>
     </>
