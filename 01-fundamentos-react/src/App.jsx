@@ -12,7 +12,7 @@ function App() {
         <Sidebar></Sidebar>
         <main>
           <Post author="Arthur" description="arthur é um cara legal" />
-          <Post author="Angelo" description="Angelo é amigo de arthur" />
+          <Post author="Arthur" description="arthur é um cara legal" />
         </main>
       </div>
     </>

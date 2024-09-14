@@ -36,12 +36,13 @@
 }
 
 .profileImg {
-  height: 4.1rem;
-  width: 4.1rem;
+  background-color: var(--gray-800);
+  width: 65px;
+  height: 65px;
   margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
-  padding: 2px;
+  padding: 3px;
   border: 2px solid var(--green-500);
 }
 
@@ -55,11 +56,12 @@
 }
 
 .profileDescription span {
+  font-size: 14px;
   color: var(--gray-400);
 }
 
 .profile img {
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
 }
 
