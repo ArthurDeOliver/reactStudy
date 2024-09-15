@@ -1,6 +1,6 @@
 import { Comment } from "./Comment";
 import styles from "./Post.module.css";
-
+import { Avatar } from "./Avatar";
 export function Post() {
   return (
     <>
@@ -8,12 +8,11 @@ export function Post() {
         <div className={styles.contentWrapper}>
           <header>
             <div className={styles.profileWrapper}>
-              <div className={styles.postPicture}>
-                <img
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
+              <Avatar
+                hasBorder={true}
+                src="https://images.unsplash.com/photo-1517630800677-932d836ab680?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              ></Avatar>
+
               <div className={styles.profileInfo}>
                 <p>Jane Cooper</p>
                 <span>Dev Front-End</span>

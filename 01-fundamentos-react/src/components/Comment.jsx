@@ -1,17 +1,17 @@
 import styles from "./Comment.module.css";
 import like from "../assets/like.svg";
 import trash from "../assets/trash.svg";
+import { Avatar } from "./Avatar";
 
 export function Comment() {
   return (
     <>
       <article>
-        <div className={styles.picture}>
-          <img
-            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
-        </div>
+        <Avatar
+          hasBorder={false}
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ></Avatar>
+
         <div className={styles.wrapper}>
           <div className={styles.commentBox}>
             <div className={styles.commentContent}>

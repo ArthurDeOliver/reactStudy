@@ -1,6 +1,6 @@
 .img {
   width: 100%;
-  height: 72px;
+  height: 4.5rem;
   object-fit: cover;
 }
 
@@ -8,7 +8,7 @@
   min-width: 16rem;
   min-height: 18.4rem;
   background-color: var(--gray-800);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -18,12 +18,16 @@
 
 .headerImg {
   width: 100%;
-  height: 4.5rem;
+  height: 72px;
 }
 
 .headerImg img {
   object-fit: cover;
   height: 100%;
+}
+
+.profile Avatar {
+  display: none;
 }
 
 .profile {
@@ -32,18 +36,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -35px;
-}
-
-.profileImg {
-  background-color: var(--gray-800);
-  width: 65px;
-  height: 65px;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 3px;
-  border: 2px solid var(--green-500);
+  top: -2.1875rem;
 }
 
 .profileDescription {
@@ -52,24 +45,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .profileDescription span {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--gray-400);
 }
 
 .profile img {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   width: 100%;
 }
 
 .sidebar footer {
   width: 100%;
-  /* margin-top: 1.5rem; */
-  border-top: 1px solid var(--gray-600);
-  padding: 2rem;
+  /* margin-top: 24px; */
+  border-top: 0.0625rem solid var(--gray-600);
+  padding: 32px;
 }
 
 .sidebar footer a {
@@ -80,10 +73,10 @@
   align-items: center;
   justify-content: center;
   color: var(--green-500);
-  padding: 16px 24px 14px 24px;
-  border: 1px solid var(--green-500);
-  border-radius: 10px;
-  gap: 10px;
+  padding: 1rem 1.5rem 0.875rem 1.5rem;
+  border: 0.0625rem solid var(--green-500);
+  border-radius: 0.625rem;
+  gap: 0.625rem;
   text-decoration: none;
   transition: background-color ease-in 300ms;
   font-weight: 600;

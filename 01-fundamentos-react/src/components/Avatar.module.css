@@ -1,0 +1,26 @@
+.profileImg {
+  object-fit: contain;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  /* padding: 6.25rem; */
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3125rem;
+  object-fit: cover;
+}
+
+.avatarWithBorder {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0.3125rem;
+  background-color: var(--gray-800);
+  border: 0.125rem solid var(--green-500);
+}

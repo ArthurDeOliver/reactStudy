@@ -1,6 +1,7 @@
 import styles from "./Sidebar.module.css";
 import pencil from "../assets/pencil.svg";
 import picture from "../assets/foto1.png";
+import { Avatar } from "./Avatar";
 
 export function Sidebar() {
   return (
@@ -14,9 +15,10 @@ export function Sidebar() {
       </div>
 
       <div className={styles.profile}>
-        <div className={styles.profileImg}>
-          <img src={picture} alt="" />
-        </div>
+        <Avatar
+          hasBorder={true}
+          src="https://avatars.githubusercontent.com/u/109746247?s=400&u=de10a90eb16a2ea4a264f5207cd5430b4f853e40&v=4"
+        />
         <div className={styles.profileDescription}>
           <strong>Arthur de Oliveira</strong>
           <span>Web Developer</span>
