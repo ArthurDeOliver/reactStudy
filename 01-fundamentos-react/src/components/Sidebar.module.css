@@ -5,8 +5,6 @@
 }
 
 .sidebar {
-  min-width: 16rem;
-  min-height: 18.4rem;
   background-color: var(--gray-800);
   border-radius: 0.5rem;
   overflow: hidden;

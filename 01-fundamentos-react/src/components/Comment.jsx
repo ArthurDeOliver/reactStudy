@@ -3,13 +3,13 @@ import like from "../assets/like.svg";
 import trash from "../assets/trash.svg";
 import { Avatar } from "./Avatar";
 
-export function Comment() {
+export function Comment({ content }) {
   return (
     <>
       <article>
         <Avatar
           hasBorder={false}
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://avatars.githubusercontent.com/u/109746247?s=400&u=de10a90eb16a2ea4a264f5207cd5430b4f853e40&v=4"
         ></Avatar>
 
         <div className={styles.wrapper}>
@@ -28,7 +28,7 @@ export function Comment() {
               </div>
             </div>
             <div className={styles.commentTxt}>
-              <p>muito bom!</p>
+              <p>{content}</p>
             </div>
           </div>
           <footer>

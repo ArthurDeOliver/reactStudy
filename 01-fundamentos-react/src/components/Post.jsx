@@ -1,21 +1,34 @@
 import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 import { Avatar } from "./Avatar";
-export function Post() {
+import { useState } from "react";
+
+export function Post({ author, content }) {
+  const [comments, setComments] = useState([]);
+
+  function handleCreateNewComment() {
+    event.preventDefault();
+
+    const newComment = event.target.comment.value;
+
+    setComments([...comments, newComment]);
+
+    event.target.comment.value = "";
+
+    console.log(newComment);
+  }
+
   return (
     <>
       <main className={styles.postMain}>
         <div className={styles.contentWrapper}>
           <header>
             <div className={styles.profileWrapper}>
-              <Avatar
-                hasBorder={true}
-                src="https://images.unsplash.com/photo-1517630800677-932d836ab680?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              ></Avatar>
+              <Avatar hasBorder={true} src={author.avatarUrl}></Avatar>
 
               <div className={styles.profileInfo}>
-                <p>Jane Cooper</p>
-                <span>Dev Front-End</span>
+                <p>{author.name}</p>
+                <span>{author.role}</span>
               </div>
             </div>
 
@@ -24,32 +37,23 @@ export function Post() {
         </div>
 
         <div className={styles.postContent}>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-            tempore repudiandae accusantium impedit laboriosam iure culpa
-            similique quasi laudantium dolorem, ullam saepe rem iusto quo qui,
-            nemo minus inventore velit aperiam vero reiciendis. Dicta corporis
-            commodi laborum natus, nesciunt deserunt adipisci, nam pariatur
-            deleniti aperiam quibusdam quaerat repellendus quisquam cumque in
-            qui quo accusamus velit reprehenderit sed minus ab facilis
-            doloribus. Fugiat, eveniet? Minima eaque molestias suscipit, nam
-            fugiat dolor. Voluptate est magnam similique non quidem, illum
-            consequuntur quae atque maxime aspernatur ratione, fugiat dolor
-            nulla autem vitae placeat tempora voluptates et, accusantium nobis
-            tenetur ab quo! Quis, earum maxime.
-          </p>
+          <p>{content}</p>
         </div>
 
-        <form className={styles.postComment}>
+        <form onSubmit={handleCreateNewComment} className={styles.postComment}>
           <span>Deixe seu feedback</span>
-          <textarea placeholder="Digite um comentário"></textarea>
+          <textarea
+            name="comment"
+            placeholder="Digite um comentário"
+          ></textarea>
           <footer>
-            <button>Publicar</button>
+            <button type="submit">Publicar</button>
           </footer>
         </form>
 
-        <Comment />
-        <Comment />
+        {comments.map((comment) => {
+          return <Comment content={comment} />;
+        })}
       </main>
     </>
   );

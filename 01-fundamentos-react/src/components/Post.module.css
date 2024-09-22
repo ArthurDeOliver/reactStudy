@@ -62,8 +62,7 @@ header span {
   resize: none;
   display: flex;
   color: white;
-  width: 47rem; /* 752px / 16 */
-  height: 6rem; /* 96px / 16 */
+  min-height: 6rem; /* 96px / 16 */
   padding: 1.25rem; /* 20px / 16 */
   align-items: center;
   flex-shrink: 0;
@@ -79,7 +78,7 @@ header span {
 
 .postComment:focus-within footer {
   visibility: visible;
-  max-height: none;
+  max-height: 100px;
 }
 
 .postComment button {
