@@ -4,18 +4,26 @@ import { Avatar } from "./Avatar";
 import { useState } from "react";
 
 export function Post({ author, content }) {
+  //*  useState({mesmo tipo da variável})
+  //! array que armazena os comentários
   const [comments, setComments] = useState([]);
+
+  //! variável que será o novo comentário
+  const [newComment, setNewComment] = useState("");
 
   function handleCreateNewComment() {
     event.preventDefault();
 
-    const newComment = event.target.comment.value;
-
     setComments([...comments, newComment]);
 
-    event.target.comment.value = "";
-
     console.log(newComment);
+    setNewComment("");
+  }
+
+  function handleNewComment() {
+    setNewComment(event.target.value);
+
+    console.log(event.target.value);
   }
 
   return (
@@ -45,6 +53,8 @@ export function Post({ author, content }) {
           <textarea
             name="comment"
             placeholder="Digite um comentário"
+            onChange={handleNewComment}
+            value={newComment}
           ></textarea>
           <footer>
             <button type="submit">Publicar</button>
