@@ -3,6 +3,7 @@ import styles from "../app.module.css";
 import { Post } from "./components/Post";
 import { Sidebar } from "./components/Sidebar";
 
+//! colocar id sempre em qualquer elemento que está sendo interado no código, id sendo um número, uma string mas que tenha um valor único
 const posts = [
   {
     id: 1,
@@ -35,7 +36,9 @@ function App() {
         <Sidebar />
         <main>
           {posts.map((post) => {
-            return <Post author={post.author} content={post.content} />;
+            return (
+              <Post author={post.author} content={post.content} key={post.id} />
+            );
           })}
         </main>
       </div>

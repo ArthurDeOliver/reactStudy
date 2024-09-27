@@ -5,10 +5,10 @@ import { useState } from "react";
 
 export function Post({ author, content }) {
   //*  useState({mesmo tipo da variável})
-  //! array que armazena os comentários
+  // array que armazena os comentários
   const [comments, setComments] = useState([]);
 
-  //! variável que será o novo comentário
+  // variável que será o novo comentário
   const [newComment, setNewComment] = useState("");
 
   function handleCreateNewComment() {
@@ -23,7 +23,16 @@ export function Post({ author, content }) {
   function handleNewComment() {
     setNewComment(event.target.value);
 
-    console.log(event.target.value);
+    // console.log(event.target.value);
+  }
+
+  function deleteComment(comentDeleted) {
+    //* Retorna um array novo sem o elemento que filtrado
+    const commentsWithoutDeletedComment = comments.filter((comment) => {
+      return comment != comentDeleted;
+    });
+    //! Lista de comentários atualizado agora setado e mudado o valor do array comments
+    setComments(commentsWithoutDeletedComment);
   }
 
   return (
@@ -62,7 +71,7 @@ export function Post({ author, content }) {
         </form>
 
         {comments.map((comment) => {
-          return <Comment content={comment} />;
+          return <Comment content={comment} deleteComment={deleteComment} />;
         })}
       </main>
     </>

@@ -3,7 +3,11 @@ import like from "../assets/like.svg";
 import trash from "../assets/trash.svg";
 import { Avatar } from "./Avatar";
 
-export function Comment({ content }) {
+export function Comment({ content, deleteComment }) {
+  function handleDeleteComment() {
+    deleteComment(content);
+  }
+
   return (
     <>
       <article>
@@ -22,7 +26,7 @@ export function Comment({ content }) {
                 <span>Cerca de 2h</span>
               </div>
               <div className={styles.trashIcon}>
-                <button>
+                <button onClick={handleDeleteComment}>
                   <img src={trash} alt="" />
                 </button>
               </div>
