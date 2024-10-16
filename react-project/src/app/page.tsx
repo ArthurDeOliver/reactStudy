@@ -13,12 +13,12 @@ export default function Home() {
     <>
       <Header></Header>
       <div className="flex items-center gap-10 flex-col p-16">
-        <Título />
+        <Título text="Olá bem-vindo!" name="Arthur" />
         <Quadrado></Quadrado>
         <Botão />
         <ListaItens />
         <Imagem
-          imagemUrl="https://images.unsplash.com/photo-1422565096762-bdb997a56a84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imagemUrl="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/11/29/1147115027-labrador-retriever.jpg"
           description="cachorro"
         />
         <Paragrafo paragrafContent="ausdhiuashdiusahidu"></Paragrafo>
