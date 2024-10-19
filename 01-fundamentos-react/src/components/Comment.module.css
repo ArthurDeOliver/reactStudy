@@ -76,6 +76,9 @@ article {
 }
 
 footer button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   background-color: transparent;
   width: 24px;
   height: 24px;

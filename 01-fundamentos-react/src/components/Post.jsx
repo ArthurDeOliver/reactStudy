@@ -26,6 +26,13 @@ export function Post({ author, content }) {
     // console.log(event.target.value);
   }
 
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity("");
+    setNewComment(event.target.value);
+  }
+
+  const isNewCommentValid = newComment.length == 0;
+
   function deleteComment(comentDeleted) {
     //* Retorna um array novo sem o elemento que filtrado
     const commentsWithoutDeletedComment = comments.filter((comment) => {
@@ -64,9 +71,13 @@ export function Post({ author, content }) {
             placeholder="Digite um comentário"
             onChange={handleNewComment}
             value={newComment}
+            required
+            onInvalid={handleNewCommentInvalid}
           ></textarea>
           <footer>
-            <button type="submit">Publicar</button>
+            <button type="submit" disabled={isNewCommentValid}>
+              Publicar
+            </button>
           </footer>
         </form>
 
