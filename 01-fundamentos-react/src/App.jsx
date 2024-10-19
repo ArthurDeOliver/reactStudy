@@ -3,7 +3,7 @@ import styles from "../app.module.css";
 import { Post } from "./components/Post";
 import { Sidebar } from "./components/Sidebar";
 
-//! colocar id sempre em qualquer elemento que está sendo interado no código, id sendo um número, uma string mas que tenha um valor único
+//* colocar id sempre em qualquer elemento que está sendo interado no código, id sendo um número, uma string mas que tenha um valor único
 const posts = [
   {
     id: 1,
