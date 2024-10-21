@@ -1,17 +1,18 @@
-import { Title } from "./components/Title";
-import { Quadrado } from "./components/Quadrado";
-import { Título } from "./components/Título";
-import { Botão } from "./components/Botão";
-import { ListaItens } from "./components/ListaItens";
-import { Imagem } from "./components/Imagem";
-import { Paragrafo } from "./components/Paragrafo";
-import { Header } from "./components/Header";
-import { Rodape } from "./components/Rodape";
+"use client";
+
+import { ButtonAddress } from "./components/ButtonAddress";
 
 export default function Home() {
   return (
     <>
-      <Header></Header>
+      <h1 className="bg-blue-800 text-black py-3 text-center text-white">
+        Buscar endereço
+      </h1>
+      <ButtonAddress />
+
+      {/* adicionando evento para o botão */}
+
+      {/* <Header></Header>
       <div className="flex items-center gap-10 flex-col p-16">
         <Título text="Olá bem-vindo!" name="Arthur" />
         <Quadrado></Quadrado>
@@ -23,7 +24,7 @@ export default function Home() {
         />
         <Paragrafo paragrafContent="ausdhiuashdiusahidu"></Paragrafo>
       </div>
-      <Rodape></Rodape>
+      <Rodape></Rodape> */}
     </>
   );
 }
