@@ -9,6 +9,7 @@ export default function Home() {
           name="Arthur de Oliveira"
           avatarURL="https://lh3.googleusercontent.com/a/ACg8ocL2ZCj1ZV95-bQYxffYSRPmjwU8b2oejuHJ9xHwBzCf3ClPQyI=s288-c-no"
         />
+        <p>Desenvolvedor Frontend</p>
       </Card>
     </>
   );
