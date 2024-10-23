@@ -5,26 +5,44 @@ import { ButtonAddress } from "./components/ButtonAddress";
 
 export default function Home() {
   const [handleAddress, setHandleAddress] = useState("");
+
+  function handleAddresForm() {
+    event?.preventDefault();
+
+    setHandleAddress(handleAddress);
+  }
+
+  function handleAddressInputValue() {
+    console.log(event?.target?.value);
+    setHandleAddress(event?.target?.value);
+
+    // console.log(event.target.value);
+  }
+
   return (
     <>
-      <h1 className="bg-green-700 py-3 text-center text-white w-full">
+      <header className="bg-green-700 py-3 text-center text-white w-full font-semibold text-2xl">
         🗺️ Buscar endereço
-      </h1>
-      <div className="h-fit w-1/3 mt-28 bg-slate-300 p-4 rounded-lg shadow-md text-black flex flex-col gap-4">
+      </header>
+      <form
+        onSubmit={handleAddresForm}
+        className="h-fit w-1/3 mt-28 bg-slate-300 p-4 rounded-lg shadow-2xl text-black flex flex-col gap-4"
+      >
         <div className="flex flex-col">
           <label htmlFor="cep" className="mb-2">
-            Digite seu CEP:
+            Digite seu CEP
           </label>
           <input
-            value={setHandleAddress}
+            onChange={handleAddressInputValue}
+            value={handleAddress}
             name="cep"
             type="text"
             placeholder="digite seu CEP"
             className=" rounded-md p-2 outline-none focus:outline-green-500 w-56"
           />
         </div>
-        <ButtonAddress />
-      </div>
+        <ButtonAddress handleInfoInput={handleAddress} />
+      </form>
 
       {/* adicionando evento para o botão */}
 

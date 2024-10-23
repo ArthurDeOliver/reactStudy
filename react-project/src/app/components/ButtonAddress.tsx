@@ -7,7 +7,6 @@ interface buttonProps {
 }
 
 export function ButtonAddress({ handleInfoInput }: buttonProps) {
-  const [handleAddress, setHandleAddress] = useState("");
   const [address, setAddress] = useState(" ");
   const [loading, setLoading] = useState(false);
 
@@ -17,9 +16,9 @@ export function ButtonAddress({ handleInfoInput }: buttonProps) {
     setLoading(true);
 
     try {
-      const result = await getAddress("53080195"); //a função tem que ser async e a chamada da função um await(espera)
+      const result = await getAddress(handleInfoInput); //a função tem que ser async e a chamada da função um await(espera)
       const resultInfo =
-        "Seu CEP é: " +
+        "Seu CEP corresponde ao endereço: " +
         result.estado +
         " " +
         result.localidade +
