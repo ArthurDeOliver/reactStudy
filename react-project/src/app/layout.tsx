@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh flex flex-col items-center bg-[url('./gpsMap.jpg')] bg-cover bg-no-repeat`}
       >
         {children}
       </body>

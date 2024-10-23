@@ -5,10 +5,12 @@ import { ButtonAddress } from "./components/ButtonAddress";
 export default function Home() {
   return (
     <>
-      <h1 className="bg-blue-800 text-black py-3 text-center text-white">
-        Buscar endereço
+      <h1 className="bg-green-700 py-3 text-center text-white w-full">
+        🗺️ Buscar endereço
       </h1>
-      <ButtonAddress />
+      <div className="h-1/3 w-2/3 mt-28 bg-slate-300 p-4 rounded-lg shadow-md text-black">
+        <ButtonAddress />
+      </div>
 
       {/* adicionando evento para o botão */}
 
