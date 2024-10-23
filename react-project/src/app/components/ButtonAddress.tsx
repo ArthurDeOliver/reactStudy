@@ -18,7 +18,7 @@ export function ButtonAddress({ handleInfoInput }: buttonProps) {
     try {
       const result = await getAddress(handleInfoInput); //a função tem que ser async e a chamada da função um await(espera)
       const resultInfo =
-        "Seu CEP corresponde ao endereço: " +
+        "Seu CEP corresponde ao endereço: 📍 " +
         result.estado +
         " " +
         result.localidade +
@@ -48,7 +48,7 @@ export function ButtonAddress({ handleInfoInput }: buttonProps) {
         >
           {loading ? "Carregando..." : "Obter Endereço"}
         </button>
-        <p className="">{address}</p>
+        <p>{address}</p>
       </div>
     </>
   );

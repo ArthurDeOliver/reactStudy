@@ -26,10 +26,10 @@ export default function Home() {
       </header>
       <form
         onSubmit={handleAddresForm}
-        className="h-fit w-1/3 mt-28 bg-slate-300 p-4 rounded-lg shadow-2xl text-black flex flex-col gap-4"
+        className="h-fit w-1/3 mt-28 bg-slate-100 p-5 rounded-lg shadow-2xl text-black flex flex-col gap-4"
       >
-        <div className="flex flex-col">
-          <label htmlFor="cep" className="mb-2">
+        <div className="flex items-center gap-4">
+          <label className="text-nowrap" htmlFor="cep">
             Digite seu CEP
           </label>
           <input
@@ -38,27 +38,12 @@ export default function Home() {
             name="cep"
             type="text"
             placeholder="digite seu CEP"
-            className=" rounded-md p-2 outline-none focus:outline-green-500 w-56"
+            className=" rounded-md p-2 outline-none focus:outline-green-500 w-full"
+            required
           />
         </div>
         <ButtonAddress handleInfoInput={handleAddress} />
       </form>
-
-      {/* adicionando evento para o botão */}
-
-      {/* <Header></Header>
-      <div className="flex items-center gap-10 flex-col p-16">
-        <Título text="Olá bem-vindo!" name="Arthur" />
-        <Quadrado></Quadrado>
-        <Botão />
-        <ListaItens />
-        <Imagem
-          imagemUrl="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/11/29/1147115027-labrador-retriever.jpg"
-          description="cachorro"
-        />
-        <Paragrafo paragrafContent="ausdhiuashdiusahidu"></Paragrafo>
-      </div>
-      <Rodape></Rodape> */}
     </>
   );
 }
