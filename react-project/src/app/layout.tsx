@@ -25,8 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      ></link>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh flex flex-col items-center bg-[url('./gpsMap.jpg')] bg-cover bg-no-repeat`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased h-dvh flex flex-col items-center bg-[url('./pngtree-urban-city-map-town-street-png-image_5987385.png')] bg-cover bg-center bg-no-repeat`}
       >
         {children}
       </body>
