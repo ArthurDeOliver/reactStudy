@@ -20,7 +20,7 @@ export function ButtonAddress({ handleInfoInput }: buttonProps) {
       const result = await getAddress(handleInfoInput); //a função tem que ser async e a chamada da função um await(espera)
       const resultInfo = "CEP: 📍 " + result.logradouro;
 
-      setAddress([...address, resultInfo]);
+      setAddress([resultInfo, ...address]);
 
       console.log(address);
     } catch (error) {

@@ -5,15 +5,16 @@ interface AddressInfoProps {
 }
 
 export function AddressInfo({ address }: AddressInfoProps) {
-  const [renderTime, setRenderTime] = useState("");
+  const [creationTime, setCreationTime] = useState("");
 
   useEffect(() => {
+    // Define o horário de criação ao montar o componente
     const now = new Date();
-    const formattedTime = now.toLocaleTimeString([], {
+    const formattedTime = now.toLocaleString("pt-BR", {
       hour: "2-digit",
       minute: "2-digit",
     });
-    setRenderTime(formattedTime);
+    setCreationTime(formattedTime);
   }, []);
 
   return (
@@ -23,7 +24,7 @@ export function AddressInfo({ address }: AddressInfoProps) {
         className="rounded-full bg-gray-200 px-3 py-1  text-gray-900  text-center"
         dateTime={new Date().toISOString()}
       >
-        {renderTime}
+        {creationTime}
       </time>
     </div>
   );
