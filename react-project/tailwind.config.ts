@@ -9,8 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
-        jet: ["JetBrains Mono", "monospace"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        jetbrains: ["var(--font-jetbrains)", "monospace"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

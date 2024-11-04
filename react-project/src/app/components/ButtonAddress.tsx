@@ -1,8 +1,9 @@
 "use client";
+//* criar um array de objetos com os resultados possuindo o logradouro e a data
+//! usar date-fns para formatar a data da forma que desejamos
 import { useState } from "react";
 import { getAddress } from "../../../get-address";
 import { AddressInfo } from "./AddressInfo";
-
 interface buttonProps {
   handleInfoInput: string;
 }
@@ -33,13 +34,13 @@ export function ButtonAddress({ handleInfoInput }: buttonProps) {
 
   return (
     <>
-      <div className="h-full flex flex-col justify-between gap-4">
+      <div className="flex h-full flex-col justify-between gap-4 font-montserrat">
         <button
           type="submit"
           onClick={handleGetAddress}
           className={`${
             loading && "opacity-30"
-          } px-5 py-3 bg-green-700 text-white rounded-md hover:bg-green-900 transition-all max-w-1/5`}
+          } max-w-1/5 rounded-md bg-green-700 px-5 py-3 text-white transition-all hover:bg-green-900`}
         >
           {loading ? "Carregando..." : "Obter Endereço"}
         </button>
